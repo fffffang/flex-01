@@ -1,0 +1,45 @@
+.tab-item{
+    text-align: center;
+    color: var(--color-neutral-700);
+}
+
+.tab-item.active .tab-link, .tab-item:hover .tab-link{
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+
+.tab-link{
+    display: block;
+    padding: 12px 0;
+}
+
+.card-content{
+    flex: 1;
+    color: var(--color-neutral-700);
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+/* 1. 卡片列表：讓每張大卡片垂直排列，中間空 24px */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 2. 單張卡片：最核心！開啟 flex 才會讓「左邊圖片」與「右邊文字」橫向並排 */
+.card {
+  display: flex;
+  gap: 24px;
+  color: var(--color-neutral-700);
+}
+
+/* 3. 卡片內文：flex: 1 會讓文字自動填滿右邊剩餘空間，gap: 12px 讓內部標題和時間推開間距 */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: auto 0; /* 讓文字在垂直方向上自動居中對齊圖片 */
+}
